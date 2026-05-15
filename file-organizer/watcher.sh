@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WATCH_DIR="/home/ubuntu/down"
-SCRIPT="/home/ubuntu/file-organizer/organize.py"
+SCRIPT="/home/ubuntu/file-organizer/organizer.py"
 
 echo "[STARTED] Watching $WATCH_DIR"
 

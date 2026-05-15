@@ -28,7 +28,7 @@ Linux Kernel (inotify events)
         ↓
 watcher.sh (systemd service)
         ↓
-organize.py (runs per file → exits)
+organizer.py (runs per file → exits)
 ```
 
 ---
@@ -54,7 +54,7 @@ organize.py (runs per file → exits)
 ```bash
 file-organizer/
 │
-├── organize.py        # Python worker script
+├── organizer.py       # Python worker script
 ├── watcher.sh         # Kernel event listener
 ├── assets/            # Screenshots
 └── README.md
@@ -86,7 +86,7 @@ sudo apt install inotify-tools
 
 ```bash
 chmod +x watcher.sh
-chmod +x organize.py
+chmod +x organizer.py
 ```
 
 ---
@@ -97,7 +97,7 @@ Edit `watcher.sh`:
 
 ```bash
 WATCH_DIR="/home/ubuntu/down"
-SCRIPT="/home/ubuntu/file-organizer/organize.py"
+SCRIPT="/home/ubuntu/file-organizer/organizer.py"
 ```
 
 ---
@@ -108,7 +108,7 @@ SCRIPT="/home/ubuntu/file-organizer/organize.py"
 #!/bin/bash
 
 WATCH_DIR="/home/ubuntu/down"
-SCRIPT="/home/ubuntu/file-organizer/organize.py"
+SCRIPT="/home/ubuntu/file-organizer/organizer.py"
 
 echo "[STARTED] Watching $WATCH_DIR"
 
